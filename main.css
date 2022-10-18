@@ -7,3 +7,46 @@ section{
     padding: 1rem;
     margin-bottom: 1em;
 }
+
+@media (min-width:320px) {
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    section{
+        flex-basis: 1em;
+    }
+
+    section.content{
+        flex-basis: 60%;
+    }
+}
+
+@media (min-width:961px) {
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    section.header,
+    section.navigation,
+    section.footer{
+        flex-basis: 100%;
+    }
+
+    section.sidebar{
+        flex-basis: 15%;
+    }
+
+    section.content{
+        margin-left: auto;
+        flex-basis: 75%;
+    }
+
+    section.sidebar,
+    section.content{
+        height: 75%;
+    }
+}
