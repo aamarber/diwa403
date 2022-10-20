@@ -8,45 +8,28 @@ section{
     margin-bottom: 1em;
 }
 
+.wrapper{
+    display: grid;
+    height: 100%;
+}
+
 @media (min-width:320px) {
     .wrapper{
-        display: flex;
-        flex-direction: column;
-    }
-
-    section{
-        flex-basis: 1em;
-    }
-
-    section.content{
-        flex-basis: 60%;
+        grid-template-rows: repeat(3, 1fr) 5fr 1fr;
     }
 }
 
 @media (min-width:961px) {
     .wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
+        grid-template-rows: repeat(2, 1fr) 7fr 1fr;
+        grid-template-columns: 1fr 5fr;
+        grid-column-gap: 2rem;
     }
 
     section.header,
     section.navigation,
     section.footer{
-        flex-basis: 100%;
-    }
-
-    section.sidebar{
-        flex-basis: 15%;
-    }
-
-    section.content{
-        margin-left: auto;
-        flex-basis: 75%;
-    }
-
-    section.sidebar,
-    section.content{
-        height: 75%;
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }
