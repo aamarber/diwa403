@@ -3,3 +3,9 @@ section{
     padding: 1rem;
     margin-bottom: 1em;
 }
+
+@media (max-width: 992px){
+    .content{
+        height: 80%;
+    }
+}
