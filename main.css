@@ -1,35 +1,9 @@
-.wrapper{
-    height: 80vh;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-section{
-    border: solid 1px gray;
-    padding: 1rem;
-    margin-bottom: 1em;
-}
-
-.wrapper{
-    display: grid;
-    height: 100%;
-}
-
-@media (min-width:320px) {
-    .wrapper{
-        grid-template-rows: repeat(3, 1fr) 5fr 1fr;
-    }
-}
-
-@media (min-width:961px) {
-    .wrapper{
-        grid-template-rows: repeat(2, 1fr) 7fr 1fr;
-        grid-template-columns: 1fr 5fr;
-        grid-column-gap: 2rem;
-    }
-
-    section.header,
-    section.navigation,
-    section.footer{
-        grid-column-start: 1;
-        grid-column-end: 3;
+@layer components{
+    .box{
+        @apply border border-gray-500 p-4 mb-4;
     }
 }
